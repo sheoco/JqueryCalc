@@ -27,6 +27,11 @@
 		width:40px;
 		margin:4px;
   }
+  .cIN{
+		height:40px;
+		width:40px;
+		margin:4px;
+  }
  
   </style>
 </head>
@@ -62,7 +67,8 @@
 				<input type="button" value="8" class="btn btn-primary cbtn bIN">
 				<input type="button" value="9" class="btn btn-primary cbtn bIN">
 				<input type="button" value="0" class="btn btn-primary cbtn bIN">
-				
+				<input type="button" value="." class="btn btn-primary cbtn bIN">
+				<input type="button" value="AC" class="btn btn-danger cbtn cIN">
 				<input type="button" value="=" class="btn btn-info btn-block cbtn bOP">
 				
 			</div>
@@ -96,6 +102,11 @@ $(".bOP").click(function(){
 
 	$("#inF").val($o);
 });
+
+$(".cIN").click(function(){
+$("#inF").val("");
+});
+
 
 });
 </script>
