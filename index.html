@@ -14,19 +14,20 @@
   .calc{
   background:#eee;
   border:1px solid #eee;
-  padding:30px;
-  width:200px;
-  height:300px;
+  padding:20px;
+  width:230px;
+  height:360px;
   }
   #inF{
 		height: 50px;
 		margin:10px;
   }
   .bIN{
-		height:30px;
-		width:30px;
+		height:40px;
+		width:40px;
 		margin:4px;
   }
+ 
   </style>
 </head>
 <body>
@@ -46,11 +47,22 @@
 				</form>
 			</div>
 			<div class="row">
-				<input type="button" value="/" class="btn btn-primary cbtn bIN">
-				<input type="button" value="*" class="btn btn-primary cbtn bIN">
-				<input type="button" value="-" class="btn btn-primary cbtn bIN">
-				<input type="button" value="+" class="btn btn-primary cbtn bIN">
-				<br><br>
+				<input type="button" value="/" class="btn btn-success cbtn bIN">
+				<input type="button" value="*" class="btn btn-success cbtn bIN">
+				<input type="button" value="-" class="btn btn-success cbtn bIN">
+				<input type="button" value="+" class="btn btn-success cbtn bIN">
+				
+				<input type="button" value="1" class="btn btn-primary cbtn bIN">
+				<input type="button" value="2" class="btn btn-primary cbtn bIN">
+				<input type="button" value="3" class="btn btn-primary cbtn bIN">
+				<input type="button" value="4" class="btn btn-primary cbtn bIN">
+				<input type="button" value="5" class="btn btn-primary cbtn bIN">
+				<input type="button" value="6" class="btn btn-primary cbtn bIN">
+				<input type="button" value="7" class="btn btn-primary cbtn bIN">
+				<input type="button" value="8" class="btn btn-primary cbtn bIN">
+				<input type="button" value="9" class="btn btn-primary cbtn bIN">
+				<input type="button" value="0" class="btn btn-primary cbtn bIN">
+				
 				<input type="button" value="=" class="btn btn-info btn-block cbtn bOP">
 				
 			</div>
@@ -64,27 +76,25 @@
 <script>
 $(document).ready(function(){
 
-
-
 $(".bIN").click(function(){
-$val = $("#inF").val();
-$s = $(this).val();
+	$val = $("#inF").val();
+	$s = $(this).val();
 
-$ins = $val + $s;
+	$ins = $val + $s;
 
-$("#inF").val($ins);
+	$("#inF").val($ins);
 
 });
 
+
 $(".bOP").click(function(){
 
-$val = $("#inF").val();
+	$val = $("#inF").val();
+	
+	//math equation implement here
+	$o = eval($val);
 
-
-//math equation implement here
-$o = eval($val);
-
-$("#inF").val($o);
+	$("#inF").val($o);
 });
 
 });
